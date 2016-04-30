@@ -4,8 +4,8 @@
   <numInputs>3</numInputs>
   <groupName>Inputs</groupName>
   <inputNames>
-    <string>inputs-1</string>
-    <string>inputs-2</string>
-    <string>inputs-3</string>
+    <string>red</string>
+    <string>green</string>
+    <string>blue</string>
   </inputNames>
 </OSCInputGroup>

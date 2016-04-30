@@ -5,7 +5,7 @@
   <outputPort>12000</outputPort>
   <outputs class="linked-list">
     <wekimini.osc.OSCClassificationOutput>
-      <name>outputs-1</name>
+      <name>color</name>
       <numClasses>6</numClasses>
       <isSendingDistribution>false</isSendingDistribution>
     </wekimini.osc.OSCClassificationOutput>
