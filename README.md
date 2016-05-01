@@ -2,14 +2,6 @@
 
 project by corbin ordel and aaron montoya
 
-00 - red
+housecat is a piano that produces sound whenever it detects an explosion while watching the die hard movie trailer.
 
-01 - orange
-
-02 - yellow
-
-03 - green
-
-04 - blue
-
-05 - violet
+it runs on max msp and wekinator.
