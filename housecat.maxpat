@@ -65,7 +65,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 85.0, 104.0, 372.0, 232.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -98,7 +98,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 289.0, 227.5, 29.0, 22.0 ],
+									"patching_rect" : [ 267.0, 162.5, 29.0, 22.0 ],
 									"style" : "",
 									"text" : "s B"
 								}
@@ -110,7 +110,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 228.0, 227.5, 29.0, 22.0 ],
+									"patching_rect" : [ 206.0, 162.5, 29.0, 22.0 ],
 									"style" : "",
 									"text" : "s G"
 								}
@@ -122,7 +122,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 167.0, 227.5, 28.0, 22.0 ],
+									"patching_rect" : [ 145.0, 162.5, 28.0, 22.0 ],
 									"style" : "",
 									"text" : "s R"
 								}
@@ -134,7 +134,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 187.5, 45.0, 20.0 ],
+									"patching_rect" : [ 28.0, 131.5, 45.0, 20.0 ],
 									"style" : "",
 									"text" : "ARGB"
 								}
@@ -147,7 +147,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 153.0, 100.0, 96.0, 33.0 ],
+									"patching_rect" : [ 130.0, 63.0, 96.0, 33.0 ],
 									"style" : "",
 									"text" : "retrieval of \nmin, mean, max"
 								}
@@ -162,7 +162,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 289.0, 187.5, 50.0, 22.0 ],
+									"patching_rect" : [ 267.0, 131.5, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -176,7 +176,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 228.0, 187.5, 50.0, 22.0 ],
+									"patching_rect" : [ 206.0, 131.5, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -190,7 +190,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 167.0, 187.5, 50.0, 22.0 ],
+									"patching_rect" : [ 145.0, 131.5, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -204,7 +204,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 106.0, 187.5, 50.0, 22.0 ],
+									"patching_rect" : [ 84.0, 131.5, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -216,7 +216,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "float", "float", "float", "float" ],
-									"patching_rect" : [ 106.0, 148.5, 202.0, 22.0 ],
+									"patching_rect" : [ 84.0, 100.5, 202.0, 22.0 ],
 									"style" : "",
 									"text" : "unpack 0. 0. 0. 0."
 								}
@@ -229,7 +229,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 95.5, 111.0, 50.5, 22.0 ],
+									"patching_rect" : [ 73.5, 63.0, 50.5, 22.0 ],
 									"style" : "",
 									"text" : "jit.3m"
 								}
@@ -243,7 +243,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "jit_matrix" ],
-									"patching_rect" : [ 95.5, 40.0, 30.0, 30.0 ],
+									"patching_rect" : [ 73.5, 25.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -391,6 +391,18 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 530.0, 380.0, 53.0, 22.0 ],
+									"style" : "",
+									"text" : "s sound"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"format" : 6,
 									"id" : "obj-18",
@@ -1081,7 +1093,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 648.0, 46.0, 159.0, 22.0 ],
+					"patching_rect" : [ 443.0, 62.0, 159.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",

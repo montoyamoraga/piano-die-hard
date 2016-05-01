@@ -6,6 +6,7 @@
 @attribute red numeric
 @attribute green numeric
 @attribute blue numeric
-@attribute color {0,1,2,3,4,5,6}
+@attribute sound numeric
+@attribute outputs-1 {0,1,2}
 
 @data

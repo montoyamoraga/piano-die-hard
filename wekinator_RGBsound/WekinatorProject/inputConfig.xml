@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <OSCInputGroup>
   <oscMessage>/wek/inputs</oscMessage>
-  <numInputs>3</numInputs>
+  <numInputs>4</numInputs>
   <groupName>Inputs</groupName>
   <inputNames>
     <string>red</string>
     <string>green</string>
     <string>blue</string>
+    <string>sound</string>
   </inputNames>
 </OSCInputGroup>
