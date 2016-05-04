@@ -18,6 +18,9 @@ int state;
 //declare speed of serial port
 int speed;
 
+//declare variable to store data from max
+int fromMax;
+
 //declare timer
 Timer testing;
 
@@ -56,6 +59,22 @@ void initGlobalVariables() {
 // the loop function runs over and over again forever
 void loop() {
 
+  moveActuator();
+
+  // send data only when you receive data:
+  if (Serial.available() > 0) {
+    // read the incoming byte:
+    fromMax = Serial.read();
+
+    // say what you got:
+    Serial.print("I received: ");
+    Serial.println(fromMax, DEC);
+  }
+
+}
+
+
+void moveActuator() {
   //output state
   digitalWrite(3, state);
 
@@ -74,3 +93,4 @@ void loop() {
   //wait
   delay(delayTime);
 }
+
