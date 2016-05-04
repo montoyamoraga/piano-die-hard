@@ -1,7 +1,6 @@
 //code by Tom Igoe
 //retrieved from https://github.com/tigoe/ArduinoGeneralExamples/
 
-
 struct timer {
   void (*callback)();       // callback for the timer
   unsigned long  interval;  // interval between callbacks, in ms
