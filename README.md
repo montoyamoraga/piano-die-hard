@@ -4,7 +4,7 @@ project by corbin ordel and aaron montoya
 
 housecat is a piano that produces sound whenever it detects an explosion while watching the die hard movie trailer.
 
-it runs on max msp and wekinator.
+it runs on max msp, arduino and wekinator.
 
 designed for the class readymades taught by gabe barcia-colombo
 
