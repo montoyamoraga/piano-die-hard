@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 42.0, 86.0, 1189.0, 654.0 ],
+		"rect" : [ 101.0, 79.0, 1068.0, 663.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-102",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 108.0, 211.0, 181.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.window output @fsmenubar 0"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-101",
 					"maxclass" : "toggle",
@@ -604,6 +617,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -665,7 +679,7 @@
 									"outlettype" : [ "jit_matrix", "" ],
 									"patching_rect" : [ 125.5, 276.0, 443.0, 22.0 ],
 									"style" : "",
-									"text" : "jit.movie @dim 352 288 @autostart 0 @loop 2 @soc die_hard_audio @engine qt"
+									"text" : "jit.movie @dim 352 288 @autostart 1 @loop 2 @soc die_hard_audio @engine qt"
 								}
 
 							}
@@ -2969,6 +2983,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-102", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}

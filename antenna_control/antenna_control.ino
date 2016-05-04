@@ -2,12 +2,8 @@
 //by corbin ordel and aaron montoya
 //may 2016
 
-
-//include interval file by tom igoe
-#include "interval.h"
-
-//declare variable for selecting output pin
-int actuatorPin;
+//declare variable for left and right pin
+int directionPin;
 
 //declare variable for delaying
 int delayTime;
@@ -16,81 +12,86 @@ int delayTime;
 int state;
 
 //declare speed of serial port
-int speed;
+int serialRate;
 
 //declare variable to store data from max
-int fromMax;
+int explosion;
 
-//declare timer
-Timer testing;
+//declare current state of the machine
+boolean goesLeft;
 
-//setup
+
 void setup() {
 
   //initialize the global variables
   initGlobalVariables();
 
-  // initialize digital pin 3 as an output.
-  pinMode(actuatorPin, OUTPUT);
+  //method for setting digital pin modes
+  declarePinModes();
 
   //set serial port communication
-  Serial.begin(speed);
+  Serial.begin(serialRate);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  updateValues();
+
+  if (goesLeft) {
+    moveLeft();
+  }
+  else {
+    moveRight();
+  }
 
 }
 
 //method for setting up the global variables
 void initGlobalVariables() {
 
-  //set the pin as output
-  actuatorPin = 3;
-
+  //set the pin for left and right
+  directionPin = 3;
+  
   //set the delay time
-  delayTime = 8000;
+  delayTime = 200;
 
   //set the initial state of the
   state = HIGH;
 
   //set the speed for serial communication
-  speed = 9600;
+  serialRate = 9600;
+
+  //variable to store data from max
+  explosion = 0;
+
+  //declare current state of the machine
+  goesLeft = true;
 
 }
 
-//draw loop
-// the loop function runs over and over again forever
-void loop() {
+void declarePinModes() {
+  //set pin for left and right as output
+  pinMode(directionPin, OUTPUT);
+}
 
-  moveActuator();
+void updateValues() {
 
-  // send data only when you receive data:
-  if (Serial.available() > 0) {
-    // read the incoming byte:
-    fromMax = Serial.read();
-
-    // say what you got:
-    Serial.print("I received: ");
-    Serial.println(fromMax, DEC);
+  if (explosion == 0) {
+    goesLeft = true;
+  }
+  else if (explosion == 1) {
+    goesLeft = false;
   }
 
 }
 
-
-void moveActuator() {
-  //output state
-  digitalWrite(3, state);
-
-  //toggle state
-  state = !state;
-
-  //wait
-  delay(delayTime);
-
-  //output state
-  digitalWrite(3, state);
-
-  //toggle state
-  state = !state;
-
-  //wait
+void moveLeft() {
+  digitalWrite(directionPin, LOW);
   delay(delayTime);
 }
 
+void moveRight() {
+  digitalWrite(directionPin, HIGH);
+  delay(delayTime);
+}
