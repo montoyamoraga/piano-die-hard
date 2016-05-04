@@ -81,10 +81,10 @@ void getSerial() {
 
     rawData = Serial.read();
 
-    if (rawData == 48) {
+    if (rawData == 1) {
       explosion = 1;
     }
-    else if (rawData == 49) {
+    else if (rawData == 0) {
       explosion = 0;
     }
     else {
