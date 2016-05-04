@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 111.0, 195.0, 968.0, 571.0 ],
+		"rect" : [ 241.0, 103.0, 806.0, 571.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -573,7 +573,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 675.0, 98.0, 592.0, 564.0 ],
+						"rect" : [ 654.0, 98.0, 592.0, 564.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -600,7 +600,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-31",
@@ -966,9 +965,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 125.5, 203.0, 142.0, 22.0 ],
+									"patching_rect" : [ 125.5, 203.0, 104.0, 22.0 ],
 									"style" : "",
-									"text" : "read diehard_trailer.mp4"
+									"text" : "read training.mp4"
 								}
 
 							}
