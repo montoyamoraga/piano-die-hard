@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 219.0, 81.0, 1010.0, 601.0 ],
+		"rect" : [ 267.0, 143.0, 1010.0, 601.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -474,7 +474,35 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-26",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 322.0, 185.0, 131.0, 23.0 ],
+									"style" : "",
+									"text" : "frame_true $1, bang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 30.0, 227.0, 101.0, 22.0 ],
+									"style" : "",
+									"text" : "s start_wekinator"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-12",
 									"maxclass" : "button",
@@ -506,9 +534,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 94.0, 279.0, 443.0, 22.0 ],
+									"patching_rect" : [ 125.5, 276.0, 443.0, 22.0 ],
 									"style" : "",
-									"text" : "jit.movie @dim 352 288 @autostart 1 @loop 2 @soc die_hard_audio @engine qt"
+									"text" : "jit.movie @dim 352 288 @autostart 0 @loop 2 @soc die_hard_audio @engine qt"
 								}
 
 							}
@@ -531,7 +559,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 120.0, 238.0, 115.0, 22.0 ],
+									"patching_rect" : [ 151.5, 235.0, 115.0, 22.0 ],
 									"style" : "",
 									"text" : "r masterMetronome"
 								}
@@ -544,7 +572,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 94.0, 327.0, 30.0, 30.0 ],
+									"patching_rect" : [ 125.5, 324.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -660,7 +688,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 94.0, 206.0, 142.0, 22.0 ],
+									"patching_rect" : [ 125.5, 203.0, 142.0, 22.0 ],
 									"style" : "",
 									"text" : "read diehard_trailer.mp4"
 								}
@@ -741,10 +769,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-16", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-26", 0 ]
 								}
 
 							}
@@ -817,7 +863,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 110.0, 129.0, 640.0, 480.0 ],
+						"rect" : [ 355.0, 259.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -847,13 +893,24 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 316.0, 225.0, 101.0, 22.0 ],
+									"style" : "",
+									"text" : "s start_wekinator"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-1",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 126.5, 80.0, 96.0, 33.0 ],
-									"presentation_rect" : [ 124.5, 80.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "enter: \ntrains the model"
 								}
@@ -1618,7 +1675,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 85.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ 289.0, 230.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1645,7 +1702,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-26",
