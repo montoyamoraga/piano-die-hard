@@ -2,6 +2,7 @@
 //by corbin ordel and aaron montoya
 //may 2016
 
+
 //include interval file by tom igoe
 #include "interval.h"
 
@@ -11,6 +12,15 @@ int actuatorPin;
 //declare variable for delaying
 int delayTime;
 
+//declare variable to store output state
+int state;
+
+//declare speed of serial port
+int speed;
+
+//declare timer
+Timer testing;
+
 //setup
 void setup() {
 
@@ -19,6 +29,9 @@ void setup() {
 
   // initialize digital pin 3 as an output.
   pinMode(actuatorPin, OUTPUT);
+
+  //set serial port communication
+  Serial.begin(speed);
 
 }
 
@@ -30,14 +43,34 @@ void initGlobalVariables() {
 
   //set the delay time
   delayTime = 8000;
-   
+
+  //set the initial state of the
+  state = HIGH;
+
+  //set the speed for serial communication
+  speed = 9600;
+
 }
 
 //draw loop
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(3, LOW);    // turn the LED off by making the voltage LOW
+
+  //output state
+  digitalWrite(3, state);
+
+  //toggle state
+  state = !state;
+
+  //wait
   delay(delayTime);
-  digitalWrite(3, HIGH);   // turn the LED on (HIGH is the voltage level)
+
+  //output state
+  digitalWrite(3, state);
+
+  //toggle state
+  state = !state;
+
+  //wait
   delay(delayTime);
 }
